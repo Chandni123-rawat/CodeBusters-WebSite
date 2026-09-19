@@ -1,0 +1,240 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events & Workshops Section</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="event-section">
+    <h2 class="section-title">Events & Workshops</h2>
+    <p class="section-subtitle">Click the button below to switch between upcoming Events and Workshops.</p>
+    <div class="toggle-container">
+      <button class="toggle-btn active" id="eventBtn">📅 Events</button>
+      <button class="toggle-btn" id="workshopBtn">🛠️ Workshops</button>
+    </div>
+    <div class="cards-grid">
+      <div class="card event">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Tech Summit" class="card-img">
+        <div class="card-content">
+          <span class="badge badge-event">Event</span>
+          <p class="card-date">November 02, 2026 • 10:00 AM</p>
+          <h3 class="card-title">Annual Tech Innovation Summit</h3>
+          <p class="card-desc">Meet founders, developers, and industry experts. Live keynote talks and open networking.</p>
+          <button class="card-btn" onclick="registerNow('Annual Tech Summit')">Book Free Pass</button>
+        </div>
+      </div>
+      <div class="card event">
+        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80" alt="Networking Mixer" class="card-img">
+        <div class="card-content">
+          <span class="badge badge-event">Event</span>
+          <p class="card-date">November 15, 2026 • 6:00 PM</p>
+          <h3 class="card-title">Community Demo & Networking Night</h3>
+          <p class="card-desc">Present your side projects, receive constructive feedback, and connect with fellow creators.</p>
+          <button class="card-btn" onclick="registerNow('Networking Night')">RSVP for Event</button>
+        </div>
+      </div>
+      <div class="card workshop hide">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80" alt="Web Dev Workshop" class="card-img">
+        <div class="card-content">
+          <span class="badge badge-workshop">Workshop</span>
+          <p class="card-date">December 05, 2026 • 3 Hours</p>
+          <h3 class="card-title">Hands-on Web Development Lab</h3>
+          <p class="card-desc">Learn HTML, CSS, and modern JavaScript step-by-step by building interactive projects live.</p>
+          <button class="card-btn" onclick="registerNow('Web Dev Workshop')">Join Workshop</button>
+        </div>
+      </div>
+      <div class="card workshop hide">
+        <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=600&q=80" alt="Design Workshop" class="card-img">
+        <div class="card-content">
+          <span class="badge badge-workshop">Workshop</span>
+          <p class="card-date">December 12, 2026 • 2.5 Hours</p>
+          <h3 class="card-title">UI/UX Design Systems in Figma</h3>
+          <p class="card-desc">Step-by-step masterclass on creating consistent colors, buttons, and design component libraries.</p>
+          <button class="card-btn" onclick="registerNow('UI/UX Design Workshop')">Join Workshop</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Workshops | CodeBuster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="event-section">
+
+    <h2 class="section-title">Events & Workshops</h2>
+
+    <p class="section-subtitle">
+        Join our upcoming events and hands-on workshops.
+        Build. Learn. Innovate.
+    </p>
+
+    <div class="toggle-container">
+        <button class="toggle-btn active" id="eventBtn">
+            📅 Events
+        </button>
+
+        <button class="toggle-btn" id="workshopBtn">
+            🛠️ Workshops
+        </button>
+    </div>
+
+    <div class="cards-grid">
+
+        <div class="card event">
+            <div class="image-wrapper">
+                <img
+                    src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80"
+                    alt="Tech Summit"
+                    class="card-img"
+                >
+            </div>
+
+            <div class="card-content">
+                <span class="badge badge-event">Event</span>
+
+                <p class="card-date">
+                    November 02, 2026 • 10:00 AM
+                </p>
+
+                <h3 class="card-title">
+                    Annual Tech Innovation Summit
+                </h3>
+
+                <p class="card-desc">
+                    Meet founders, developers, and industry experts.
+                    Experience live keynote talks and open networking.
+                </p>
+
+                <button
+                    class="card-btn"
+                    onclick="registerNow('Annual Tech Summit')"
+                >
+                    Book Free Pass →
+                </button>
+            </div>
+        </div>
+
+        <div class="card event">
+            <div class="image-wrapper">
+                <img
+                    src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80"
+                    alt="Networking Mixer"
+                    class="card-img"
+                >
+            </div>
+
+            <div class="card-content">
+                <span class="badge badge-event">Event</span>
+
+                <p class="card-date">
+                    November 15, 2026 • 6:00 PM
+                </p>
+
+                <h3 class="card-title">
+                    Community Demo & Networking Night
+                </h3>
+
+                <p class="card-desc">
+                    Present your side projects, receive constructive
+                    feedback, and connect with fellow creators.
+                </p>
+
+                <button
+                    class="card-btn"
+                    onclick="registerNow('Networking Night')"
+                >
+                    RSVP for Event →
+                </button>
+            </div>
+        </div>
+
+        <div class="card workshop hide">
+            <div class="image-wrapper">
+                <img
+                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80"
+                    alt="Web Development Workshop"
+                    class="card-img"
+                >
+            </div>
+
+            <div class="card-content">
+                <span class="badge badge-workshop">Workshop</span>
+
+                <p class="card-date">
+                    December 05, 2026 • 3 Hours
+                </p>
+
+                <h3 class="card-title">
+                    Hands-on Web Development Lab
+                </h3>
+
+                <p class="card-desc">
+                    Learn HTML, CSS, and modern JavaScript step-by-step
+                    by building interactive projects live.
+                </p>
+
+                <button
+                    class="card-btn"
+                    onclick="registerNow('Web Dev Workshop')"
+                >
+                    Join Workshop →
+                </button>
+            </div>
+        </div>
+
+        <div class="card workshop hide">
+            <div class="image-wrapper">
+                <img
+                    src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&q=80"
+                    alt="UI UX Design Workshop"
+                    class="card-img"
+                >
+            </div>
+
+            <div class="card-content">
+                <span class="badge badge-workshop">Workshop</span>
+
+                <p class="card-date">
+                    December 12, 2026 • 2.5 Hours
+                </p>
+
+                <h3 class="card-title">
+                    UI/UX Design Systems in Figma
+                </h3>
+
+                <p class="card-desc">
+                    Learn how to create consistent colors, buttons,
+                    components, and professional design systems.
+                </p>
+
+                <button
+                    class="card-btn"
+                    onclick="registerNow('UI/UX Design Workshop')"
+                >
+                    Join Workshop →
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
