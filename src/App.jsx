@@ -3,6 +3,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Team from './pages/Team';
+import Gallery from './pages/Gallery';
 import siteBg from './assets/site-bg.jpg';
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/gallery" element={<Gallery />} />
               </Routes>
             </main>
           </div>

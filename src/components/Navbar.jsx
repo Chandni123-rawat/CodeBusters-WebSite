@@ -16,6 +16,8 @@ function Navbar() {
       <div className="flex items-center gap-6 text-sm font-medium text-[#9AA6C4]">
         <Link to="/" className="hover:text-white transition">Home</Link>
         <Link to="/about" className="hover:text-white transition">About</Link>
+        <Link to="/team" className="hover:text-white transition">Team</Link>
+        <Link to="/gallery" className="hover:text-white transition">Gallery</Link>
       </div>
       <a 
         href="#join"

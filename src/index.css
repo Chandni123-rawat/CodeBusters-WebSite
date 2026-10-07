@@ -5,6 +5,10 @@
   --color-brand-blue-bright: #6E93FF;
   --color-brand-glow: rgba(46, 92, 255, 0.35);
 
+  --color-brand-sky: #38BDF8;
+  --color-brand-sky-bright: #7DD3FC;
+  --color-brand-sky-glow: rgba(56, 189, 248, 0.45);
+
   --color-bg-page: #060A15;
   --color-bg-surface: #0D1526;
   --color-bg-surface-2: #111B33;
@@ -18,8 +22,17 @@
   --color-text-muted: #5B6685;
 
   --font-serif: "Source Serif 4", Georgia, serif;
+  --font-cinzel: "Cinzel", "Source Serif 4", Georgia, serif;
   --font-sans: "Inter", -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+}
+
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
 }
 
 body {
