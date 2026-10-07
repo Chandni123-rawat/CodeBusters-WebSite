@@ -1,7 +1,36 @@
 import { Link } from 'react-router-dom';
+
+
+const upcomingEvents = [
+  {
+    id: 1,
+    title: "HackNight: Build in 12 Hours",
+    description: "A short-format hackathon for teams of 2–4, open to all years.",
+    date: "Sep 20 · 6 PM",
+    location: "Seminar Hall B"
+  },
+  {
+    id: 2,
+    title: "Git & GitHub for Beginners",
+    description: "Branching, PRs, and undoing your mistakes without crying.",
+    date: "Sep 24 · 5 PM",
+    location: "Lab 4, CS Block"
+  },
+  {
+    id: 3,
+    title: "CodeBusters Monthly CP Contest",
+    description: "Rated round, DSA-heavy, open registration closes Sunday.",
+    date: "Sep 28 · 10 AM",
+    location: "Online"
+  }
+];
+
+
 function Home() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-20">
+      
+
       <section className="min-h-[85vh] flex flex-col items-center justify-center text-center relative overflow-hidden">
         <div className="absolute w-[500px] h-[500px] bg-[#2E5CFF]/15 rounded-full blur-[120px] pointer-events-none -top-20"></div>
 
@@ -36,32 +65,80 @@ function Home() {
 
       <div id="main-content"></div>
 
-      <span className="font-mono text-xs text-[#6E93FF] tracking-wider uppercase bg-[#2E5CFF]/10 border border-[#2E5CFF]/30 px-3 py-1 rounded-full">
-        discover → learn → participate → build → showcase
-      </span>
-      <h1 className="font-serif text-5xl md:text-7xl font-medium text-[#F3F5FB] mt-6 max-w-3xl leading-[1.1]">
-        Where students stop watching tech happen, and start shiping it.
-      </h1>
-      <p className="text-[#9AA6C4] text-lg md:text-xl mt-6 max-w-2xl leading-relaxed">
-        CodeBusters is a full-stack technical community — events, workshops, learning
-        roadmaps, and a place to put your projects in front of people who'll actually use them.
-      </p>
-      <div className="flex flex-wrap gap-4 mt-8">
-        <Link
-          to="/about"
-          className="font-mono text-sm font-semibold px-6 py-3 rounded-lg bg-[#2E5CFF] text-white shadow-[0_8px_24px_-6px_rgba(46,92,255,0.5)] hover:bg-blue-600 transition"
-        >
-          About us
-        </Link>
-        <a
-          href="#join"
-          className="font-mono text-sm font-semibold px-6 py-3 rounded-lg border border-[#6E93FF]/35 text-[#F3F5FB] hover:bg-white/5 transition"
-        >
-          Get involved with us
-        </a>
+
+      <div className="pt-16">
+        <span className="font-mono text-xs text-[#6E93FF] tracking-wider uppercase bg-[#2E5CFF]/10 border border-[#2E5CFF]/30 px-3 py-1 rounded-full">
+          discover → learn → participate → build → showcase
+        </span>
+        <h1 className="font-serif text-5xl md:text-7xl font-medium text-[#F3F5FB] mt-6 max-w-3xl leading-[1.1]">
+          Where students stop watching tech happen, and start shipping it.
+        </h1>
+        <p className="text-[#9AA6C4] text-lg md:text-xl mt-6 max-w-2xl leading-relaxed">
+          CodeBusters is a full-stack technical community — events, workshops, learning
+          roadmaps, and a place to put your projects in front of people who'll actually use them.
+        </p>
+        <div className="flex flex-wrap gap-4 mt-8">
+          <Link
+            to="/about"
+            className="font-mono text-sm font-semibold px-6 py-3 rounded-lg bg-[#2E5CFF] text-white shadow-[0_8px_24px_-6px_rgba(46,92,255,0.5)] hover:bg-blue-600 transition"
+          >
+            About us
+          </Link>
+          <a
+            href="#join"
+            className="font-mono text-sm font-semibold px-6 py-3 rounded-lg border border-[#6E93FF]/35 text-[#F3F5FB] hover:bg-white/5 transition"
+          >
+            Get involved with us
+          </a>
+        </div>
       </div>
+
+
+      <section className="mt-24 border-t border-white/10 pt-16">
+        <div className="flex items-end justify-between mb-10">
+          <div>
+            <span className="font-mono text-xs text-[#6E93FF] tracking-wider uppercase block mb-2">
+              what's next
+            </span>
+            <h2 className="text-3xl font-bold text-white font-sans">
+              Upcoming events
+            </h2>
+          </div>
+          <Link to="/about" className="text-sm font-medium text-[#9AA6C4] hover:text-white transition">
+            See all events →
+          </Link>
+        </div>
+
+        {/* 3-Column Grid */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {upcomingEvents.map((event) => (
+            <div 
+              key={event.id}
+              className="bg-[#0D1526] border border-white/10 rounded-xl p-6 hover:border-[#6E93FF]/40 hover:-translate-y-1 transition duration-200"
+            >
+              <div className="h-32 rounded-lg bg-gradient-to-br from-[#111B33] to-[#141F3B] border border-dashed border-white/10 flex items-center justify-center font-mono text-xs text-[#5B6685] mb-5">
+                event_banner.png
+              </div>
+
+              <h4 className="text-lg font-bold text-white font-sans">
+                {event.title}
+              </h4>
+              <p className="text-sm text-[#9AA6C4] mt-2 leading-relaxed">
+                {event.description}
+              </p>
+
+              <div className="flex items-center gap-4 mt-6 pt-4 border-t border-white/5 font-mono text-xs text-[#5B6685]">
+                <span>📅 {event.date}</span>
+                <span>📍 {event.location}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
     </div>
   );
 }
+
 
 export default Home;
