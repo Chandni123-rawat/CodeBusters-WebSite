@@ -4,15 +4,15 @@ import { useState } from 'react';
 const galleryItems = [
   {
     id: 1,
-    title: 'BuildCamp: 48-Hour Intensive Builder Bootcamp',
+    title: 'BuildCamp: 4-Hour Hands-On AI Workshop',
     category: 'BuildCamp',
     tag: 'Flagship Event',
     date: 'Recent Edition',
-    caption: 'Mentorship, Creativity, And Chaos Blended Into One Unforgettable Tech Experience.',
-    image: '', // Space left for image to be added later
+    caption: 'Department of Computer Engineering & Applications and Code Busters Club is organizing a 4-Hour Hands-On AI Workshop - BuildCamp exclusively for B.Tech CSE 2nd Year (AI & Data Science Track).',
+    image: '/buildcamp.png', 
     span: 'col-span-1 md:col-span-2 row-span-2',
     aspect: 'h-[360px] md:h-[420px]',
-    description: 'Teams collaborating tirelessly during BuildCamp to architect, build, and deploy full-stack working prototypes under the mentorship of senior builders and faculty.'
+    description: 'Teams collaborating during the 4-Hour BuildCamp workshop to architect and build hands-on AI solutions under the mentorship of senior builders and faculty.'
   },
   {
     id: 2,
