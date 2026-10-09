@@ -1,9 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 
-/**
- * CoverflowSlider Component
- * 3D Cover Flow Carousel matching CodeBusters dark red-accented aesthetics.
- */
+
 function CoverflowSlider({ members, title, subtitle }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
@@ -50,7 +47,7 @@ function CoverflowSlider({ members, title, subtitle }) {
       {title && (
         <div className="mb-10 px-4 max-w-7xl mx-auto">
           <h2 
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider font-cinzel text-transparent bg-clip-text bg-gradient-to-r from-[#7DD3FC] via-[#38BDF8] to-[#2E5CFF] uppercase drop-shadow-[0_2px_12px_rgba(56,189,248,0.3)]"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7DD3FC] via-[#38BDF8] to-[#2E5CFF] uppercase drop-shadow-[0_2px_12px_rgba(56,189,248,0.3)]"
           >
             {title}
           </h2>
@@ -135,7 +132,7 @@ function CoverflowSlider({ members, title, subtitle }) {
                     <div className="absolute inset-0 bg-gradient-to-b from-[#141F3B] via-[#0E1528] to-[#070B16] flex flex-col items-center justify-center p-6 text-center">
                       {/* Stylized Avatar Silhouette / Initials */}
                       <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border border-white/10 bg-[#192440]/60 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(56,189,248,0.2)] relative">
-                        <div className="text-3xl sm:text-4xl font-bold font-cinzel text-white/70">
+                        <div className="text-3xl sm:text-4xl font-bold font-sans text-white/70">
                           {member.name.split(' ').map(n => n[0]).filter(Boolean).slice(0, 2).join('')}
                         </div>
                         {isActive && (
@@ -163,7 +160,7 @@ function CoverflowSlider({ members, title, subtitle }) {
 
                   {/* Member Details */}
                   <div className="relative z-10 p-5 sm:p-6 text-left">
-                    <h3 className="font-cinzel text-lg sm:text-xl font-bold text-white tracking-wide uppercase leading-tight drop-shadow-md">
+                    <h3 className="font-sans text-lg sm:text-xl font-bold text-white tracking-wide uppercase leading-tight drop-shadow-md">
                       {member.name}
                     </h3>
 

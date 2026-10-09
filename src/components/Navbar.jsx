@@ -15,16 +15,24 @@ function Navbar() {
 
       <div className="flex items-center gap-6 text-sm font-medium text-[#9AA6C4]">
         <Link to="/" className="hover:text-white transition">Home</Link>
-        <Link to="/about" className="hover:text-white transition">About</Link>
+        <Link to="/projects" className="hover:text-white transition">Projects</Link>
+        <Link to="/achievements" className="hover:text-white transition">Achievements</Link>
         <Link to="/team" className="hover:text-white transition">Team</Link>
         <Link to="/gallery" className="hover:text-white transition">Gallery</Link>
+        <Link to="/about" className="hover:text-white transition">About</Link>
       </div>
-      <a 
-        href="#join"
+      <Link 
+        to="/about#contact"
+        onClick={() => {
+          setTimeout(() => {
+            const el = document.getElementById('contact');
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }}
         className="font-mono text-xs font-semibold px-4 py-2 rounded-md bg-[#2E5CFF] text-white shadow-[0_4px_16px_rgba(46,92,255,0.35)] hover:bg-blue-600 transition"
       >
         Get involved
-      </a>
+      </Link>
     </nav>
   );
 }

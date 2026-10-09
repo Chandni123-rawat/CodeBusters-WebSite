@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import cbLogo from '../assets/cb-logo.png';
 
 
 const upcomingEvents = [
@@ -35,13 +36,23 @@ function Home() {
         <div className="absolute w-[500px] h-[500px] bg-[#2E5CFF]/15 rounded-full blur-[120px] pointer-events-none -top-20"></div>
 
         <div className="relative mb-8">
-          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-[#2E5CFF] to-[#141F3B] border border-[#6E93FF]/40 flex items-center justify-center animate-badge-glow shadow-[0_0_35px_rgba(46,92,255,0.4)]">
-            <span className="font-sans font-black text-5xl sm:text-6xl text-white inline-block animate-letter-c">
-              C
-            </span>
-            <span className="font-sans font-black text-5xl sm:text-6xl text-[#6E93FF] inline-block animate-letter-b">
-              B
-            </span>
+          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-[#2E5CFF] to-[#141F3B] border border-[#6E93FF]/40 flex items-center justify-center animate-badge-collision shadow-[0_0_35px_rgba(46,92,255,0.4)] relative overflow-hidden">
+            {/* 1. Letters that slide, collide, and dissolve */}
+            <div className="absolute inset-0 flex items-center justify-center animate-letters-container select-none">
+              <span className="font-sans font-black text-5xl sm:text-6xl text-white inline-block animate-letter-c">
+                C
+              </span>
+              <span className="font-sans font-black text-5xl sm:text-6xl text-[#6E93FF] inline-block animate-letter-b">
+                B
+              </span>
+            </div>
+
+            {/* 2. Official CodeBusters Logo that morphs in from the collision flash */}
+            <img 
+              src={cbLogo} 
+              alt="CodeBusters Official Logo" 
+              className="w-full h-full object-cover rounded-full animate-logo-morph relative z-10"
+            />
           </div>
         </div>
 

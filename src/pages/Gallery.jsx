@@ -9,7 +9,7 @@ const galleryItems = [
     tag: 'Flagship Event',
     date: 'Recent Edition',
     caption: 'Department of Computer Engineering & Applications and Code Busters Club is organizing a 4-Hour Hands-On AI Workshop - BuildCamp exclusively for B.Tech CSE 2nd Year (AI & Data Science Track).',
-    image: '/buildcamp.png', 
+    image: '/buildcamp.png',
     span: 'col-span-1 md:col-span-2 row-span-2',
     aspect: 'h-[360px] md:h-[420px]',
     description: 'Teams collaborating during the 4-Hour BuildCamp workshop to architect and build hands-on AI solutions under the mentorship of senior builders and faculty.'
@@ -140,7 +140,7 @@ function Gallery() {
             CodeBusters Chronicles
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wider font-cinzel text-transparent bg-clip-text bg-gradient-to-r from-[#7DD3FC] via-[#38BDF8] to-[#2E5CFF] uppercase drop-shadow-[0_2px_12px_rgba(56,189,248,0.3)]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wider font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7DD3FC] via-[#38BDF8] to-[#2E5CFF] uppercase drop-shadow-[0_2px_12px_rgba(56,189,248,0.3)]">
             EVENTS & CLUB GALLERY
           </h1>
 
@@ -179,30 +179,35 @@ function Gallery() {
               className={`group relative rounded-2xl overflow-hidden cursor-pointer border border-white/10 hover:border-[#38BDF8]/60 transition-all duration-500 hover:shadow-[0_15px_40px_rgba(0,0,0,0.8),0_0_25px_rgba(56,189,248,0.25)] ${item.span} ${item.aspect} bg-[#0D1526]`}
             >
               {/* Image or Image Placeholder Slot */}
-              {item.image ? (
+              {item.image && (
                 <img
                   src={item.image}
                   alt={item.title}
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    if (e.currentTarget.nextElementSibling) {
+                      e.currentTarget.nextElementSibling.style.display = 'flex';
+                    }
+                  }}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-              ) : (
-                /* Sleek Dark Tech Placeholder Container */
-                <div className="w-full h-full bg-gradient-to-br from-[#162344] via-[#0E1528] to-[#070B16] flex flex-col items-center justify-center p-6 relative overflow-hidden group-hover:from-[#1b2b52] transition-colors">
-                  <div className="absolute inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
-
-                  <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-3 group-hover:scale-110 group-hover:border-[#38BDF8]/40 transition-all shadow-lg">
-                    <span className="text-2xl">📸</span>
-                  </div>
-
-                  <span className="text-[11px] font-mono tracking-widest text-[#38BDF8] uppercase">
-                    {item.tag}
-                  </span>
-
-                  <span className="text-[10px] font-mono text-[#5B6685] mt-1">
-                    Image Space Reserved
-                  </span>
-                </div>
               )}
+              {/* Sleek Dark Tech Placeholder Container */}
+              <div className={`w-full h-full bg-gradient-to-br from-[#162344] via-[#0E1528] to-[#070B16] flex flex-col items-center justify-center p-6 relative overflow-hidden group-hover:from-[#1b2b52] transition-colors ${item.image ? 'hidden' : 'flex'}`}>
+                <div className="absolute inset-0 bg-[radial-gradient(#ffffff08_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+
+                <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-3 group-hover:scale-110 group-hover:border-[#38BDF8]/40 transition-all shadow-lg">
+                  <span className="text-2xl">📸</span>
+                </div>
+
+                <span className="text-[11px] font-mono tracking-widest text-[#38BDF8] uppercase">
+                  {item.tag}
+                </span>
+
+                <span className="text-[10px] font-mono text-[#5B6685] mt-1">
+                  Image Space Reserved
+                </span>
+              </div>
 
               {/* Tag in top-left */}
               <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
@@ -219,7 +224,7 @@ function Gallery() {
 
               {/* Bottom Caption Overlay */}
               <div className="absolute bottom-0 inset-x-0 p-5 sm:p-6 z-20">
-                <h3 className="font-cinzel text-base sm:text-lg font-bold text-white uppercase leading-snug group-hover:text-[#38BDF8] transition-colors">
+                <h3 className="font-sans text-base sm:text-lg font-bold text-white uppercase leading-snug group-hover:text-[#38BDF8] transition-colors">
                   {item.title}
                 </h3>
 
@@ -259,21 +264,26 @@ function Gallery() {
 
             {/* Photo / Placeholder Display */}
             <div className="w-full h-80 sm:h-96 bg-gradient-to-br from-[#182649] via-[#0E1528] to-[#070B16] flex flex-col items-center justify-center relative p-6">
-              {selectedPhoto.image ? (
+              {selectedPhoto.image && (
                 <img
                   src={selectedPhoto.image}
                   alt={selectedPhoto.title}
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    if (e.currentTarget.nextElementSibling) {
+                      e.currentTarget.nextElementSibling.style.display = 'block';
+                    }
+                  }}
                   className="w-full h-full object-contain"
                 />
-              ) : (
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-3">
-                    <span className="text-3xl">📸</span>
-                  </div>
-                  <h4 className="font-cinzel text-xl text-white font-bold uppercase">{selectedPhoto.title}</h4>
-                  <p className="text-xs font-mono text-[#38BDF8] mt-1">Image slot reserved for future upload</p>
-                </div>
               )}
+              <div className={`text-center ${selectedPhoto.image ? 'hidden' : 'block'}`}>
+                <div className="w-20 h-20 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-3">
+                  <span className="text-3xl">📸</span>
+                </div>
+                <h4 className="font-sans text-xl text-white font-bold uppercase">{selectedPhoto.title}</h4>
+                <p className="text-xs font-mono text-[#38BDF8] mt-1">Image slot reserved for future upload</p>
+              </div>
             </div>
 
             {/* Modal Info Footer */}
@@ -285,7 +295,7 @@ function Gallery() {
                 <span className="text-xs font-mono text-[#9AA6C4]">{selectedPhoto.date}</span>
               </div>
 
-              <h2 className="font-cinzel text-xl sm:text-2xl font-bold text-white uppercase mt-2">
+              <h2 className="font-sans text-xl sm:text-2xl font-bold text-white uppercase mt-2">
                 {selectedPhoto.title}
               </h2>
 
