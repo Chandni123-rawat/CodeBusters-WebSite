@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Team from './pages/Team';
 import Gallery from './pages/Gallery';
+import Projects from './pages/Projects';
+import Achievements from './pages/Achievements';
 import siteBg from './assets/site-bg.jpg';
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/achievements" element={<Achievements />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/gallery" element={<Gallery />} />
               </Routes>

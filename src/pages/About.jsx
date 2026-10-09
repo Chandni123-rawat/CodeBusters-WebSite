@@ -1,7 +1,14 @@
+import { useEffect } from 'react';
 import instaIcon from '../assets/insta.jpeg';
 import githubIcon from '../assets/github.png';
 
 function About() {
+  useEffect(() => {
+    if (window.location.hash === '#contact') {
+      const el = document.getElementById('contact');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
   const domains = [
     "DSA", "Web Development", "AI / ML", "App Development",
     "Git & GitHub", "Cloud", "Cybersecurity", "Competitive Programming"
@@ -69,7 +76,7 @@ function About() {
           ))}
         </div>
       </div>
-      <div className="mt-16 bg-[#0D1526] border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+      <div id="contact" className="mt-16 bg-[#0D1526] border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.5)] scroll-mt-28">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <span className="font-mono text-xs text-[#6E93FF] uppercase tracking-wider block mb-2">

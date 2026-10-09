@@ -170,7 +170,7 @@ const associatesData = [
   { name: 'Vimal', team: 'Content Team', role: 'Technical Writer', icon: '✍️' },
 
   // Event / PR Team
-  { name: 'Amit Mishra', team: 'Event / PR Team', role: 'Event Operations Associate', icon: '🎯' },
+  { name: 'Amrit Mishra', team: 'Event / PR Team', role: 'Event Operations Associate', icon: '🎯🥇' },
   { name: 'Rachika Yadav', team: 'Event / PR Team', role: 'PR & Outreach Associate', icon: '🎯' },
   { name: 'Anshika Agarwal', team: 'Event / PR Team', role: 'Event Management Associate', icon: '🎯' },
   { name: 'Khushi Saini', team: 'Event / PR Team', role: 'Public Relations Associate', icon: '🎯' },
@@ -208,7 +208,7 @@ function Team() {
           The People Behind CodeBusters
         </div>
 
-        <h1 className="font-cinzel text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white via-[#F3F5FB] to-gray-400 drop-shadow-md">
+        <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white via-[#F3F5FB] to-gray-400 drop-shadow-md">
           Team CodeBusters
         </h1>
 
@@ -240,7 +240,7 @@ function Team() {
       <section className="max-w-7xl mx-auto px-6 pt-20">
         {/* Section Header */}
         <div className="mb-10">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider font-cinzel text-transparent bg-clip-text bg-gradient-to-r from-[#7DD3FC] via-[#38BDF8] to-[#2E5CFF] uppercase drop-shadow-[0_2px_12px_rgba(56,189,248,0.3)]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7DD3FC] via-[#38BDF8] to-[#2E5CFF] uppercase drop-shadow-[0_2px_12px_rgba(56,189,248,0.3)]">
             OUR ASSOCIATES
           </h2>
           <div className="h-0.5 w-16 bg-[#38BDF8] mt-2 mb-3 shadow-[0_0_10px_#38BDF8]" />
@@ -277,7 +277,7 @@ function Team() {
               <div className="w-full h-44 rounded-xl bg-gradient-to-b from-[#141F3B] via-[#0E1528] to-[#070B16] border border-white/5 relative overflow-hidden flex flex-col items-center justify-center mb-4 group-hover:border-[#38BDF8]/30 transition-colors">
                 {/* Initials & Silhouette Avatar */}
                 <div className="w-16 h-16 rounded-full bg-[#1A2644] border border-white/10 flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform duration-300">
-                  <span className="font-cinzel text-xl font-bold text-white/80">
+                  <span className="font-sans text-xl font-bold text-white/80">
                     {assoc.name.split(' ').map(n => n[0]).filter(Boolean).slice(0, 2).join('')}
                   </span>
                 </div>
@@ -300,7 +300,7 @@ function Team() {
                   {assoc.team}
                 </span>
 
-                <h3 className="font-cinzel text-lg font-bold text-white group-hover:text-[#38BDF8] transition-colors uppercase leading-snug">
+                <h3 className="font-sans text-lg font-bold text-white group-hover:text-[#38BDF8] transition-colors uppercase leading-snug">
                   {assoc.name}
                 </h3>
 
