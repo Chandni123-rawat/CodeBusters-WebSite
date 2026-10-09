@@ -33,13 +33,13 @@ function Achievements() {
     <div className="max-w-6xl mx-auto px-6 py-16">
       {/* Hero Header */}
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <span className="font-mono text-xs text-[#38BDF8] tracking-widest uppercase bg-[#38BDF8]/10 border border-[#38BDF8]/30 px-3.5 py-1.5 rounded-full inline-block mb-4">
+        <span className="font-mono text-xs text-[#6E93FF] tracking-wider uppercase bg-[#2E5CFF]/10 border border-[#2E5CFF]/30 px-3.5 py-1.5 rounded-full inline-block mb-4">
           MILESTONES & HONORS
         </span>
-        <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium text-[#F3F5FB] tracking-tight leading-tight">
           Club Achievements
         </h1>
-        <p className="text-[#9AA6C4] text-base sm:text-lg mt-5 leading-relaxed">
+        <p className="text-[#9AA6C4] text-base sm:text-lg mt-5 max-w-2xl mx-auto leading-relaxed font-sans">
           From hackathon podium finishes to industry certifications, celebrating CodeBusters milestones and competitive wins.
         </p>
       </div>

@@ -115,7 +115,7 @@ function Home() {
               Upcoming events
             </h2>
           </div>
-          <Link to="/about" className="text-sm font-medium text-[#9AA6C4] hover:text-white transition">
+          <Link to="/events" className="text-sm font-medium text-[#9AA6C4] hover:text-white transition">
             See all events →
           </Link>
         </div>

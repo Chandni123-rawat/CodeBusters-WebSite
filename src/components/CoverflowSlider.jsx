@@ -47,11 +47,11 @@ function CoverflowSlider({ members, title, subtitle }) {
       {title && (
         <div className="mb-10 px-4 max-w-7xl mx-auto">
           <h2 
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7DD3FC] via-[#38BDF8] to-[#2E5CFF] uppercase drop-shadow-[0_2px_12px_rgba(56,189,248,0.3)]"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold font-sans text-[#F3F5FB]"
           >
             {title}
           </h2>
-          <div className="h-0.5 w-16 bg-[#38BDF8] mt-2 mb-3 shadow-[0_0_10px_#38BDF8]" />
+          <div className="h-0.5 w-16 bg-[#2E5CFF] mt-2 mb-3 shadow-[0_0_10px_#2E5CFF]" />
           {subtitle && (
             <p className="text-xs sm:text-sm font-mono tracking-wider text-[#9AA6C4] uppercase">
               {subtitle}

@@ -20,11 +20,12 @@ function Footer() {
             <h4 className="font-bold text-white mb-3 text-xs uppercase font-mono tracking-wider text-[#6E93FF]">Explore</h4>
             <div className="flex flex-col gap-2 text-[#9AA6C4]">
               <Link to="/" className="hover:text-white transition">Home</Link>
-              <Link to="/about" className="hover:text-white transition">About Us</Link>
+              <Link to="/events" className="hover:text-white transition">Events & Workshops</Link>
               <Link to="/projects" className="hover:text-white transition">Projects</Link>
               <Link to="/achievements" className="hover:text-white transition">Achievements</Link>
               <Link to="/team" className="hover:text-white transition">Team</Link>
               <Link to="/gallery" className="hover:text-white transition">Gallery</Link>
+              <Link to="/about" className="hover:text-white transition">About Us</Link>
             </div>
           </div>
 

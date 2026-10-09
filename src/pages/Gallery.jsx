@@ -135,20 +135,17 @@ function Gallery() {
       {/* Top Banner / Breadcrumb */}
       <section className="pt-12 pb-4 px-6 max-w-7xl mx-auto">
         <div className="mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#38BDF8]/10 border border-[#38BDF8]/30 text-[#38BDF8] text-xs font-mono mb-4 tracking-wider uppercase">
-            <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse" />
-            CodeBusters Chronicles
-          </div>
+        <span className="font-mono text-xs text-[#6E93FF] tracking-wider uppercase bg-[#2E5CFF]/10 border border-[#2E5CFF]/30 px-3.5 py-1.5 rounded-full inline-block mb-4">
+          CodeBusters Chronicles
+        </span>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-wider font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7DD3FC] via-[#38BDF8] to-[#2E5CFF] uppercase drop-shadow-[0_2px_12px_rgba(56,189,248,0.3)]">
-            EVENTS & CLUB GALLERY
-          </h1>
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium text-[#F3F5FB] tracking-tight leading-tight">
+          Events & Club Gallery
+        </h1>
 
-          <div className="h-0.5 w-20 bg-[#38BDF8] mt-2 mb-3 shadow-[0_0_10px_#38BDF8]" />
-
-          <p className="text-xs sm:text-sm font-mono tracking-wider text-[#9AA6C4] uppercase">
-            Reliving BuildCamp • Catalyst • TechWave & Signature Club Moments
-          </p>
+        <p className="text-[#9AA6C4] text-base sm:text-lg mt-4 max-w-2xl font-sans leading-relaxed">
+          Reliving BuildCamp • Catalyst • TechWave & Signature Club Moments
+        </p>
         </div>
 
         {/* Filter Pills in Theme Blue */}

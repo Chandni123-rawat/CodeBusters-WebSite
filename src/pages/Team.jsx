@@ -203,16 +203,15 @@ function Team() {
     <div className="min-h-screen text-[#F3F5FB] pb-24">
       {/* Hero Banner Header */}
       <section className="relative pt-12 pb-8 px-6 text-center max-w-5xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#38BDF8]/10 border border-[#38BDF8]/30 text-[#38BDF8] text-xs font-mono mb-4 tracking-wider uppercase">
-          <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse" />
+        <span className="font-mono text-xs text-[#6E93FF] tracking-wider uppercase bg-[#2E5CFF]/10 border border-[#2E5CFF]/30 px-3.5 py-1.5 rounded-full inline-block mb-4">
           The People Behind CodeBusters
-        </div>
+        </span>
 
-        <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-white via-[#F3F5FB] to-gray-400 drop-shadow-md">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium text-[#F3F5FB] tracking-tight leading-tight">
           Team CodeBusters
         </h1>
 
-        <p className="font-sans text-sm sm:text-base text-[#9AA6C4] mt-4 max-w-2xl mx-auto leading-relaxed">
+        <p className="font-sans text-base sm:text-lg text-[#9AA6C4] mt-5 max-w-2xl mx-auto leading-relaxed">
           The visionaries, mentors, student leaders, and engineers working behind the scenes
           to foster innovation, conduct premier hackathons, and build the future.
         </p>
@@ -222,7 +221,7 @@ function Team() {
       <section className="mt-8 border-t border-b border-white/5 bg-[#060A15]/60 backdrop-blur-sm">
         <CoverflowSlider 
           members={facultyMentors}
-          title="MEET OUR FACULTY MENTORS"
+          title="Meet Our Faculty Mentors"
           subtitle="Meet The Faculty Behind The Vision"
         />
       </section>
@@ -231,8 +230,8 @@ function Team() {
       <section className="mt-16 border-b border-white/5 bg-[#080D1D]/40 backdrop-blur-sm">
         <CoverflowSlider 
           members={coreHeads}
-          title="MEET OUR TEAM"
-          subtitle="Meet The Minds Behind The Innovation & Leadership"
+          title="Meet Our Core Leadership"
+          subtitle="Meet The Minds Behind Innovation & Leadership"
         />
       </section>
 
@@ -240,10 +239,10 @@ function Team() {
       <section className="max-w-7xl mx-auto px-6 pt-20">
         {/* Section Header */}
         <div className="mb-10">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wider font-sans text-transparent bg-clip-text bg-gradient-to-r from-[#7DD3FC] via-[#38BDF8] to-[#2E5CFF] uppercase drop-shadow-[0_2px_12px_rgba(56,189,248,0.3)]">
-            OUR ASSOCIATES
+          <h2 className="text-3xl font-bold text-[#F3F5FB] font-sans">
+            Our Associates
           </h2>
-          <div className="h-0.5 w-16 bg-[#38BDF8] mt-2 mb-3 shadow-[0_0_10px_#38BDF8]" />
+          <div className="h-0.5 w-16 bg-[#2E5CFF] mt-2 mb-3 shadow-[0_0_10px_#2E5CFF]" />
           <p className="text-xs sm:text-sm font-mono tracking-wider text-[#9AA6C4] uppercase">
             The Powerhouse Driving Every CodeBusters Initiative
           </p>

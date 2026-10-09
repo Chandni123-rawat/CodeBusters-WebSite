@@ -7,6 +7,7 @@ import Team from './pages/Team';
 import Gallery from './pages/Gallery';
 import Projects from './pages/Projects';
 import Achievements from './pages/Achievements';
+import Events from './pages/Events';
 import siteBg from './assets/site-bg.jpg';
 
 function App() {
@@ -26,11 +27,12 @@ function App() {
             <main>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
+                <Route path="/events" element={<Events />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/achievements" element={<Achievements />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/gallery" element={<Gallery />} />
+                <Route path="/about" element={<About />} />
               </Routes>
             </main>
           </div>
