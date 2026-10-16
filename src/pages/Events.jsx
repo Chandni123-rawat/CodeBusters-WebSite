@@ -3,30 +3,6 @@ import { useState } from 'react';
 const sessionsData = [
   {
     id: 1,
-    type: 'event',
-    badge: 'Flagship Summit',
-    date: 'November 02, 2026 • 10:00 AM',
-    location: 'Main University Auditorium & Online',
-    title: 'Annual Tech Innovation Summit',
-    description: 'Meet founders, developers, and industry experts. Experience live keynote talks, tech showcases, and open networking with top engineering leaders.',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
-    seats: '120 Seats Left',
-    btnText: 'Book Free Pass →'
-  },
-  {
-    id: 2,
-    type: 'event',
-    badge: 'Community Sprint',
-    date: 'November 15, 2026 • 6:00 PM',
-    location: 'Innovation Lab, CS Block',
-    title: 'Community Demo & Networking Night',
-    description: 'Present your side projects, receive constructive feedback from peers, and connect with fellow student creators across web, AI, and systems engineering.',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80',
-    seats: '45 Seats Left',
-    btnText: 'RSVP for Event →'
-  },
-  {
-    id: 3,
     type: 'workshop',
     badge: 'Flagship AI Workshop',
     date: 'November 22, 2026 • 2:00 PM',
@@ -38,39 +14,15 @@ const sessionsData = [
     btnText: 'Register for Workshop →'
   },
   {
-    id: 4,
-    type: 'workshop',
-    badge: 'Hands-on Lab',
-    date: 'December 05, 2026 • 3 Hours',
-    location: 'Lab 4, CS Block',
-    title: 'Hands-on Web Development Lab',
-    description: 'Learn modern React, Tailwind CSS, and full-stack integration step-by-step by building interactive live projects from scratch.',
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80',
-    seats: '35 Seats Left',
-    btnText: 'Join Workshop →'
-  },
-  {
-    id: 5,
-    type: 'workshop',
-    badge: 'Design System',
-    date: 'December 12, 2026 • 2.5 Hours',
-    location: 'Design Studio & Virtual Stream',
-    title: 'UI/UX Design Systems in Figma',
-    description: 'Masterclass on architecting scalable design tokens, component libraries, typography hierarchy, and auto-layout systems ready for engineering handoff.',
-    image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=800&q=80',
-    seats: '50 Seats Left',
-    btnText: 'Join Workshop →'
-  },
-  {
-    id: 6,
+    id: 2,
     type: 'event',
-    badge: 'Hackathon',
-    date: 'December 20, 2026 • 6:00 PM',
-    location: 'Seminar Hall B',
-    title: 'HackNight: Build in 12 Hours',
-    description: 'A fast-paced overnight hackathon for teams of 2–4 open to all years. Free fuel, pizza, mentorship, and cloud credits with prizes for top builds.',
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80',
-    seats: '25 Teams Left',
+    badge: 'Flagship Ideathon',
+    date: 'December 10, 2026 • 10:00 AM',
+    location: 'Main University Auditorium & CS Block',
+    title: 'Catalyst: Ideathon to Product Incubation',
+    description: 'Where raw concepts transform into viable tech products. Teams pitch innovative problem statements, defend system architectures, and build working prototypes before faculty mentors and industry juries.',
+    image: '',
+    seats: '30 Teams Left',
     btnText: 'Register Team →'
   }
 ];
@@ -98,20 +50,20 @@ function Events() {
           CodeBusters Calendar & Sessions
         </span>
 
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium text-[#F3F5FB] tracking-tight leading-tight">
+        <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl font-black text-[#F3F5FB] tracking-tight leading-tight">
           Events & Workshops
         </h1>
 
         <p className="text-[#9AA6C4] text-base sm:text-lg mt-5 max-w-2xl mx-auto leading-relaxed font-sans">
-          Join our upcoming hackathons, innovation summits, and hands-on developer labs. Build. Learn. Innovate.
+          Join our flagship editions: BuildCamp & Catalyst. Build. Learn. Innovate.
         </p>
 
         {/* Filter Navigation */}
         <div className="inline-flex p-1.5 rounded-xl bg-[#0D1526] border border-white/10 mt-8 gap-2 shadow-lg">
           {[
             { id: 'all', label: '⚡ All Sessions' },
-            { id: 'event', label: '📅 Events' },
-            { id: 'workshop', label: '🛠️ Workshops' }
+            { id: 'workshop', label: '🛠️ BuildCamp' },
+            { id: 'event', label: '📅 Catalyst' }
           ].map(tab => (
             <button
               key={tab.id}
@@ -128,8 +80,8 @@ function Events() {
         </div>
       </div>
 
-      {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Cards Grid - 2 columns centered */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {filteredSessions.map(session => (
           <div
             key={session.id}

@@ -3,7 +3,7 @@ import cbLogo from '../assets/cb-logo.png';
 
 function Navbar() {
   return (
-    <nav className="flex items-center justify-between px-8 py-5 border-b border-white/10 bg-[#060A15]/80 backdrop-blur sticky top-0 z-50">
+    <nav className="flex items-center justify-between px-8 py-4 border-b border-white/[0.08] bg-[#030714]/60 backdrop-blur-xl sticky top-0 z-50 transition-colors">
       <Link to="/" className="flex items-center gap-3 text-white font-bold text-lg">
         <img 
           src={cbLogo} 
@@ -18,8 +18,7 @@ function Navbar() {
         <Link to="/about" className="hover:text-white transition">About</Link>
         <Link to="/team" className="hover:text-white transition">Team</Link>
         <Link to="/events" className="hover:text-white transition">Events</Link>
-        <Link to="/projects" className="hover:text-white transition">Projects</Link>
-        <Link to="/achievements" className="hover:text-white transition">Achievements</Link>
+        <Link to="/alumni" className="hover:text-white transition">Alumni</Link>
         <Link to="/gallery" className="hover:text-white transition">Gallery</Link>
       </div>
       <Link 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-// CodeBusters Gallery Items featuring BuildCamp, Catalyst, TechWave and Club Life
+// CodeBusters Gallery Items featuring BuildCamp and Catalyst exclusively
 const galleryItems = [
   {
     id: 1,
@@ -8,7 +8,7 @@ const galleryItems = [
     category: 'BuildCamp',
     tag: 'Flagship Event',
     date: 'Recent Edition',
-    caption: 'Department of Computer Engineering & Applications and Code Busters Club is organizing a 4-Hour Hands-On AI Workshop - BuildCamp exclusively for B.Tech CSE 2nd Year (AI & Data Science Track).',
+    caption: 'Department of Computer Engineering & Applications and Code Busters Club organized a 4-Hour Hands-On AI Workshop - BuildCamp exclusively for B.Tech CSE 2nd Year (AI & Data Science Track).',
     image: '/buildcamp.png',
     span: 'col-span-1 md:col-span-2 row-span-2',
     aspect: 'h-[360px] md:h-[420px]',
@@ -22,21 +22,21 @@ const galleryItems = [
     date: 'Recent Edition',
     caption: 'Where raw concepts transform into viable tech products.',
     image: '',
-    span: 'col-span-1 row-span-2',
+    span: 'col-span-1 md:col-span-2 row-span-2',
     aspect: 'h-[360px] md:h-[420px]',
     description: 'Participants pitching innovative problem statements and defensible tech solutions during the Catalyst technical symposium.'
   },
   {
     id: 3,
-    title: 'TechWave: Podium Winners & Grand Trophy Ceremony',
-    category: 'TechWave',
-    tag: 'Victory Moment',
+    title: 'BuildCamp: Hands-On AI Architecture Sprint',
+    category: 'BuildCamp',
+    tag: 'AI Sprint',
     date: 'Recent Edition',
-    caption: 'Celebrating the brightest problem solvers and builders.',
+    caption: 'Architecting neural networks, APIs, and model deployments.',
     image: '',
-    span: 'col-span-1 md:col-span-1 row-span-2',
-    aspect: 'h-[360px] md:h-[420px]',
-    description: 'Respected CEA faculty mentors and club leads presenting trophies, cash prizes, and certificates to winning teams at TechWave.'
+    span: 'col-span-1 md:col-span-2',
+    aspect: 'h-[280px]',
+    description: 'Intensive lab sprint where student teams work through deep learning models, data preprocessing pipelines, and practical AI implementations.'
   },
   {
     id: 4,
@@ -52,54 +52,6 @@ const galleryItems = [
   },
   {
     id: 5,
-    title: 'TechWave: Packed Auditorium Keynote',
-    category: 'TechWave',
-    tag: 'Community',
-    date: 'Recent Edition',
-    caption: 'Over 300+ eager tech minds gathered in one room.',
-    image: '',
-    span: 'col-span-1 md:col-span-2',
-    aspect: 'h-[280px]',
-    description: 'Opening keynote session at TechWave showcasing technological breakthroughs, system design, and AI advancements.'
-  },
-  {
-    id: 6,
-    title: 'BuildCamp: Midnight Debugging & Code Sprint',
-    category: 'BuildCamp',
-    tag: 'Hackathon Sprint',
-    date: 'Recent Edition',
-    caption: 'Debugging at 3 AM: When the code finally compiles.',
-    image: '',
-    span: 'col-span-1',
-    aspect: 'h-[280px]',
-    description: 'Late night sprint where teams work through complex API integrations, database queries, and frontend polishes.'
-  },
-  {
-    id: 7,
-    title: 'Grand Closing & Community Celebration',
-    category: 'Club Life',
-    tag: 'Celebration',
-    date: 'Recent Edition',
-    caption: 'The unforgettable energy of a united engineering community.',
-    image: '',
-    span: 'col-span-1 md:col-span-2',
-    aspect: 'h-[280px]',
-    description: 'Valedictory moments, roaring cheers, and club memories captured across our major flagship events.'
-  },
-  {
-    id: 8,
-    title: 'Hands-on Web & Cloud Architecture Workshop',
-    category: 'Workshops',
-    tag: 'Skill Sprint',
-    date: 'Recent Edition',
-    caption: 'Moving beyond theory into production-ready software.',
-    image: '',
-    span: 'col-span-1',
-    aspect: 'h-[280px]',
-    description: 'Interactive session led by CodeBusters technical and development team heads covering modern web frameworks.'
-  },
-  {
-    id: 9,
     title: 'Catalyst: Jury Evaluations & Live Testing',
     category: 'Catalyst',
     tag: 'Jury Round',
@@ -115,11 +67,7 @@ const galleryItems = [
 const categories = [
   'All Moments',
   'BuildCamp',
-  'Catalyst',
-  'TechWave',
-  'Workshops',
-  'Prize Ceremonies',
-  'Club Life'
+  'Catalyst'
 ];
 
 function Gallery() {
@@ -139,12 +87,12 @@ function Gallery() {
           CodeBusters Chronicles
         </span>
 
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium text-[#F3F5FB] tracking-tight leading-tight">
+        <h1 className="font-sans text-4xl sm:text-5xl md:text-6xl font-black text-[#F3F5FB] tracking-tight leading-tight">
           Events & Club Gallery
         </h1>
 
         <p className="text-[#9AA6C4] text-base sm:text-lg mt-4 max-w-2xl font-sans leading-relaxed">
-          Reliving BuildCamp • Catalyst • TechWave & Signature Club Moments
+          Reliving Flagship Moments from BuildCamp & Catalyst
         </p>
         </div>
 

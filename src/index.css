@@ -35,7 +35,7 @@
 }
 
 body {
-  background-color: #060A15;
+  background-color: #030714;
   color: #F3F5FB;
   font-family: var(--font-sans);
   margin: 0;
@@ -109,3 +109,45 @@ body {
 .animate-fade-delayed {
   animation: fadeInDelayed 1s 1.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+
+/* Atmospheric Aurora Breathing / Float Animations */
+@keyframes auroraDrift1 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(25px, 20px, 0) scale(1.08);
+  }
+}
+
+@keyframes auroraDrift2 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-30px, 25px, 0) scale(1.06);
+  }
+}
+
+@keyframes auroraDrift3 {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate3d(-15px, -20px, 0) scale(1.12);
+    opacity: 0.6;
+  }
+}
+
+.animate-aurora-1 {
+  animation: auroraDrift1 14s ease-in-out infinite;
+}
+
+.animate-aurora-2 {
+  animation: auroraDrift2 18s ease-in-out infinite alternate;
+}
+
+.animate-aurora-3 {
+  animation: auroraDrift3 12s ease-in-out infinite alternate;
+}

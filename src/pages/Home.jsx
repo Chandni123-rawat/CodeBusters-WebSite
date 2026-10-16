@@ -5,24 +5,21 @@ import cbLogo from '../assets/cb-logo.png';
 const upcomingEvents = [
   {
     id: 1,
-    title: "HackNight: Build in 12 Hours",
-    description: "A short-format hackathon for teams of 2–4, open to all years.",
-    date: "Sep 20 · 6 PM",
-    location: "Seminar Hall B"
+    title: "BuildCamp: 4-Hour Hands-On AI Workshop",
+    description: "Architect and deploy real neural network pipelines under faculty and builder mentorship exclusively for B.Tech CSE (AI & Data Science Track).",
+    date: "Nov 22 · 2 PM",
+    location: "Advanced AI Lab, CS Block",
+    image: "/buildcamp.png",
+    badge: "Flagship Workshop"
   },
   {
     id: 2,
-    title: "Git & GitHub for Beginners",
-    description: "Branching, PRs, and undoing your mistakes without crying.",
-    date: "Sep 24 · 5 PM",
-    location: "Lab 4, CS Block"
-  },
-  {
-    id: 3,
-    title: "CodeBusters Monthly CP Contest",
-    description: "Rated round, DSA-heavy, open registration closes Sunday.",
-    date: "Sep 28 · 10 AM",
-    location: "Online"
+    title: "Catalyst: Ideathon to Product Incubation",
+    description: "Where raw concepts transform into viable tech products. Pitch problem statements, defend system designs, and build working prototypes.",
+    date: "Dec 10 · 10 AM",
+    location: "Main Auditorium & CS Block",
+    image: "",
+    badge: "Flagship Ideathon"
   }
 ];
 
@@ -57,7 +54,7 @@ function Home() {
         </div>
 
         <div className="animate-fade-delayed">
-          <h1 className="font-serif text-4xl sm:text-6xl font-medium tracking-tight text-white mb-3">
+          <h1 className="font-sans text-5xl sm:text-7xl font-black tracking-tight text-white mb-3">
             CodeBusters
           </h1>
           <p className="font-mono text-xs sm:text-sm text-[#9AA6C4] tracking-widest uppercase mb-10">
@@ -81,7 +78,7 @@ function Home() {
         <span className="font-mono text-xs text-[#6E93FF] tracking-wider uppercase bg-[#2E5CFF]/10 border border-[#2E5CFF]/30 px-3 py-1 rounded-full">
           discover → learn → participate → build → showcase
         </span>
-        <h1 className="font-serif text-5xl md:text-7xl font-medium text-[#F3F5FB] mt-6 max-w-3xl leading-[1.1]">
+        <h1 className="font-sans text-5xl md:text-7xl font-extrabold text-[#F3F5FB] mt-6 max-w-3xl leading-[1.1] tracking-tight">
           Where students stop watching tech happen, and start shipping it.
         </h1>
         <p className="text-[#9AA6C4] text-lg md:text-xl mt-6 max-w-2xl leading-relaxed">
@@ -120,25 +117,42 @@ function Home() {
           </Link>
         </div>
 
-        {/* 3-Column Grid */}
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* 2-Column Grid */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {upcomingEvents.map((event) => (
             <div 
               key={event.id}
-              className="bg-[#0D1526] border border-white/10 rounded-xl p-6 hover:border-[#6E93FF]/40 hover:-translate-y-1 transition duration-200"
+              className="bg-[#0D1526]/85 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-[#6E93FF]/40 hover:-translate-y-1 transition duration-200 flex flex-col justify-between shadow-lg"
             >
-              <div className="h-32 rounded-lg bg-gradient-to-br from-[#111B33] to-[#141F3B] border border-dashed border-white/10 flex items-center justify-center font-mono text-xs text-[#5B6685] mb-5">
-                event_banner.png
+              <div>
+                <div className="h-40 rounded-xl overflow-hidden bg-gradient-to-br from-[#111B33] to-[#141F3B] border border-white/10 flex items-center justify-center font-mono text-xs text-[#5B6685] mb-5 relative">
+                  {event.image ? (
+                    <img 
+                      src={event.image} 
+                      alt={event.title}
+                      className="w-full h-full object-cover"
+                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    />
+                  ) : (
+                    <div className="text-center p-4">
+                      <span className="text-3xl block mb-1">⚡</span>
+                      <span className="font-mono text-xs text-[#38BDF8] uppercase tracking-wider">{event.badge}</span>
+                    </div>
+                  )}
+                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-[#060A15]/80 backdrop-blur text-[10px] font-mono text-[#38BDF8] border border-white/10 uppercase">
+                    {event.badge}
+                  </span>
+                </div>
+
+                <h4 className="text-xl font-bold text-white font-sans">
+                  {event.title}
+                </h4>
+                <p className="text-sm text-[#9AA6C4] mt-2.5 leading-relaxed">
+                  {event.description}
+                </p>
               </div>
 
-              <h4 className="text-lg font-bold text-white font-sans">
-                {event.title}
-              </h4>
-              <p className="text-sm text-[#9AA6C4] mt-2 leading-relaxed">
-                {event.description}
-              </p>
-
-              <div className="flex items-center gap-4 mt-6 pt-4 border-t border-white/5 font-mono text-xs text-[#5B6685]">
+              <div className="flex items-center gap-4 mt-6 pt-4 border-t border-white/5 font-mono text-xs text-[#9AA6C4]">
                 <span>📅 {event.date}</span>
                 <span>📍 {event.location}</span>
               </div>

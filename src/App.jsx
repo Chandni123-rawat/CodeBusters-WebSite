@@ -5,20 +5,17 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Team from './pages/Team';
 import Gallery from './pages/Gallery';
-import Projects from './pages/Projects';
-import Achievements from './pages/Achievements';
+import Alumni from './pages/Alumni';
 import Events from './pages/Events';
-import siteBg from './assets/site-bg.jpg';
+import AmbientBackground from './components/AmbientBackground';
+import AnimatedCursor from './components/AnimatedCursor';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-[#060A15] text-[#F3F5FB] relative selection:bg-[#2E5CFF] selection:text-white flex flex-col justify-between">
-        
-        <div 
-          className="fixed inset-0 z-0 opacity-35 pointer-events-none bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${siteBg})` }}
-        />
+      <div className="min-h-screen text-[#F3F5FB] relative selection:bg-[#2E5CFF] selection:text-white flex flex-col justify-between">
+        <AmbientBackground />
+        <AnimatedCursor />
 
 
         <div className="relative z-10 flex flex-col min-h-screen justify-between">
@@ -28,8 +25,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/events" element={<Events />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/achievements" element={<Achievements />} />
+                <Route path="/alumni" element={<Alumni />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/about" element={<About />} />

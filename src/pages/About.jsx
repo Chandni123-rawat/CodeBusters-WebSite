@@ -23,10 +23,7 @@ function About() {
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-16">
-      <span className="font-mono text-xs text-[#5B6685] uppercase tracking-wider">
-        about the club
-      </span>
-      <h1 className="font-serif text-4xl md:text-6xl font-medium text-[#F3F5FB] mt-2 mb-16">
+      <h1 className="font-sans text-4xl md:text-6xl font-extrabold text-[#F3F5FB] mb-14 tracking-tight">
         A technical club, run like one.
       </h1>
       <div className="grid md:grid-cols-2 gap-12 pb-16 border-b border-white/10">
@@ -67,13 +64,43 @@ function About() {
           club objectives
         </span>
         <h2 className="text-3xl font-bold text-[#F3F5FB] mb-8 font-sans">What CodeBusters actually does</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {objectives.map((item, index) => (
-            <div key={index} className="bg-[#0D1526] p-6 rounded-xl border border-white/10 hover:border-[#6E93FF]/40 transition">
-              <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
-              <p className="text-sm text-[#9AA6C4] leading-relaxed">{item.desc}</p>
+        
+        {/* Single unified box / cohesive paragraph format */}
+        <div className="bg-[#0D1526]/80 backdrop-blur-md p-8 md:p-10 rounded-2xl border border-white/10 hover:border-[#6E93FF]/30 transition shadow-xl">
+          <p className="text-base sm:text-lg text-[#CBD5E1] leading-relaxed mb-8 font-sans">
+            CodeBusters exists to bridge the gap between classroom theory and real-world tech delivery. We don’t do passive slide lectures — we organize high-energy hackathons, technical speaker sessions, and hands-on workshops led by experienced seniors and industry alumni. Through curated domain roadmaps, we help members avoid tutorial traps and build a genuine portfolio of production-ready software to showcase in front of an active engineering community.
+          </p>
+
+          <div className="grid sm:grid-cols-2 gap-6 pt-6 border-t border-white/10">
+            <div className="flex items-start gap-3.5">
+              <span className="text-[#38BDF8] text-xl">⚡</span>
+              <div>
+                <h4 className="text-white font-semibold text-base">Run Events & Hackathons</h4>
+                <p className="text-sm text-[#9AA6C4] mt-1">Hackathons, contests, and technical talks organized through every semester.</p>
+              </div>
             </div>
-          ))}
+            <div className="flex items-start gap-3.5">
+              <span className="text-[#38BDF8] text-xl">💡</span>
+              <div>
+                <h4 className="text-white font-semibold text-base">Teach, Don’t Just Talk</h4>
+                <p className="text-sm text-[#9AA6C4] mt-1">Hands-on, code-along workshops led by seniors and alumni, not slideware.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3.5">
+              <span className="text-[#38BDF8] text-xl">🧭</span>
+              <div>
+                <h4 className="text-white font-semibold text-base">Curate Direct Roadmaps</h4>
+                <p className="text-sm text-[#9AA6C4] mt-1">Tested learning roadmaps so you don’t waste a semester picking a tutorial.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3.5">
+              <span className="text-[#38BDF8] text-xl">🚀</span>
+              <div>
+                <h4 className="text-white font-semibold text-base">Showcase Real Work</h4>
+                <p className="text-sm text-[#9AA6C4] mt-1">A real audience and platform for projects that would otherwise sit on GitHub.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div id="contact" className="mt-16 bg-[#0D1526] border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.5)] scroll-mt-28">

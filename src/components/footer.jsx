@@ -3,7 +3,7 @@ import cbLogo from '../assets/cb-logo.png';
 
 function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#060A15]/90 mt-28 py-14 px-8">
+    <footer className="border-t border-white/[0.08] bg-[#030714]/80 backdrop-blur-md mt-28 py-14 px-8">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         <div>
           <div className="flex items-center gap-3 text-white font-bold text-lg mb-3">
@@ -21,8 +21,7 @@ function Footer() {
             <div className="flex flex-col gap-2 text-[#9AA6C4]">
               <Link to="/" className="hover:text-white transition">Home</Link>
               <Link to="/events" className="hover:text-white transition">Events & Workshops</Link>
-              <Link to="/projects" className="hover:text-white transition">Projects</Link>
-              <Link to="/achievements" className="hover:text-white transition">Achievements</Link>
+              <Link to="/alumni" className="hover:text-white transition">Our Alumni</Link>
               <Link to="/team" className="hover:text-white transition">Team</Link>
               <Link to="/gallery" className="hover:text-white transition">Gallery</Link>
               <Link to="/about" className="hover:text-white transition">About Us</Link>
